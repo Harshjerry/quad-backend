@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-dotenv.config({ path: './config.env' });
+dotenv.config();
 const cors = require('cors');
 const holinfoRouter=require('./routes/Holinfo');
 
