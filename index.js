@@ -17,6 +17,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/holinfo",holinfoRouter);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("backend is running");
 });
