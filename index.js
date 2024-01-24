@@ -14,15 +14,15 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
   });
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json());    
+
+app.use("/api/holinfo",holinfoRouter);
 app.use("/",(req,res)=>{
   return res.status(200).json(
     {success:true,
     message:" ia am working fine"}
   )
-})
-app.use("/api/holinfo",holinfoRouter);
-
+})  
 app.listen(process.env.PORT, () => {
   console.log("backend is running");
 });
